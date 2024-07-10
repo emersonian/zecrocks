@@ -12,3 +12,4 @@ Requests are routed to Fly's closest edge reason. Fly internally routes these re
 
 Kubernetes on Vultr Kubernetes Engine and dedicated hardware (k3s). Lightwalletd communicates to Zebra inside each Kubernetes cluster. The cluster receives inbound requests from HAProxy on a Kubernetes load balanced service (an SSL URL managed by Traefik within the cluster), which uses LetsEncrypt to generate certificates.
 
+<img width="848" alt="zecrocks architecture" src="https://github.com/emersonian/zecrocks/assets/19352366/ad4536cb-7f4b-4e62-9818-cc6ff3b89d51">
