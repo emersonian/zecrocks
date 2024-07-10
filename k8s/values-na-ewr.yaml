@@ -1,0 +1,23 @@
+ingress:
+  domains:
+  - na-ewr.zec.rocks
+
+zcashd:
+  enabled: false
+
+zebra:
+  enabled: true
+  initSnapshot:
+    enabled: true
+
+lightwalletd:
+  rpcService: zebra
+  image:
+    repository: emersonian/zcash-lwd
+    tag: v0.4.17-cache1
+    hash: bfd1dd2577bd9f163ae1274228246479c145d6237c34664735a34e376d6cf3c4
+
+rpc:
+  credentials:
+    rpcUser: zeczeczec
+    rpcPassword: REDACTED

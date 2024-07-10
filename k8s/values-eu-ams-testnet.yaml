@@ -1,0 +1,27 @@
+ingress:
+  domains:
+  - eu-ams.testnet.zec.rocks
+
+zebra:
+  enabled: true
+  testnet: true
+  initSnapshot:
+    enabled: true
+    url: https://link.storjshare.io/s/jx57rsxczom44lvhgu4fj3ohq5qa/nodedumps/zec/zebra-testnet-2024-04-22.tar
+  volumes:
+    data:
+      size: 50Gi
+
+lightwalletd:
+  rpcService: zebra
+  volumes:
+    data:
+      size: 10Gi
+
+zcashd:
+  enabled: false
+
+rpc:
+  credentials:
+    rpcUser: zeczeczec
+    rpcPassword: REDACTED

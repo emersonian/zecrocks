@@ -1,0 +1,32 @@
+ingress:
+  domains:
+  - na-ewr.testnet.zec.rocks
+
+zebra:
+  enabled: true
+  testnet: true
+  initSnapshot:
+    enabled: true
+    url: https://link.storjshare.io/s/jx57rsxczom44lvhgu4fj3ohq5qa/nodedumps/zec/zebra-testnet-2024-04-22.tar?download=1
+  volumes:
+    data:
+      size: 50Gi
+
+lightwalletd:
+  rpcService: zebra
+  volumes:
+    data:
+      size: 10Gi
+  image:
+    repository: emersonian/zcash-lwd
+    tag: v0.4.17-cache1
+    hash: bfd1dd2577bd9f163ae1274228246479c145d6237c34664735a34e376d6cf3c4
+
+zcashd:
+  enabled: false
+
+rpc:
+  credentials:
+    rpcUser: zeczeczec
+    rpcPassword: REDACTED
+    
