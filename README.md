@@ -6,7 +6,7 @@ This repository holds the configurations for the Helm releases and HAProxy load 
 
 ### Edge (Fly.io)
 
-Requests are routed to Fly's closest edge reason. Fly internally routes these requests to our containers on their platform, the closest to the requesting user. We host containers on Fly in each city where we have Kubernetes backend clusters. The containers are running, HAProxy which receives inbound user requests and routes them to healthy Kubernetes clusters on the backend.
+Requests are routed to Fly's closest edge region. Fly internally routes these requests to our containers on their platform, the closest to the requesting user. We host containers on Fly in each city where we have Kubernetes backend clusters. The containers are running, HAProxy which receives inbound user requests and routes them to healthy Kubernetes clusters on the backend.
 
 ### Backend
 
